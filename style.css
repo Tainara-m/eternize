@@ -1,6 +1,7 @@
 :root {
   --bg: #fbf9f5;
   --assent-color: #80543b;
+  --title-font-family: "Noto Serif", sans-serif;
 }
 
 * {
@@ -53,7 +54,7 @@ header img {
 }
 
 nav,
-ul {
+nav ul {
   display: flex;
   list-style: none;
   width: fit-content;
@@ -62,7 +63,7 @@ ul {
 }
 
 .nav-links a {
-  font-family: "Noto Serif", sans-serif;
+  font-family: var(--title-font-family);
   font-size: 1rem;
   color: #78716c;
 }
@@ -83,20 +84,23 @@ header .cta {
 section {
   width: 100%;
   min-height: fit-content;
-  height: 100%;
+  height: 100vh;
   padding: 6rem 2rem 4rem;
 }
 
 #hero {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 6rem;
   padding: 6rem;
 }
 
 .left-content,
 .right-content {
-  width: calc(50% - 3rem);
+  width: 100%;
+  max-width: 576px;
   height: fit-content;
 }
 
@@ -116,7 +120,7 @@ section {
 }
 
 h1 {
-  font-family: "Noto Serif", sans-serif;
+  font-family: var(--title-font-family);
   font-size: 4.5rem;
   line-height: 4.5rem;
   color: #1b1c1a;
@@ -207,7 +211,7 @@ h1 {
 }
 
 .phrase {
-  font-family: "Noto Serif", sans-serif;
+  font-family: var(--title-font-family);
   color: #1b1c1a;
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -228,8 +232,9 @@ h1 {
 }
 
 #how h2 {
-  font-family: "Noto Serif", sans-serif;
+  font-family: var(--title-font-family);
   font-size: 3rem;
+  font-weight: 400;
   color: #1b1c1a;
   width: 100%;
   flex-wrap: wrap;
@@ -278,7 +283,7 @@ h1 {
 
 .card-number {
   width: 100%;
-  font-family: "Noto Serif", sans-serif;
+  font-family: var(--title-font-family);
   font-size: 4rem;
   line-height: 4.5rem;
   color: rgba(128, 84, 59, 0.1);
@@ -297,4 +302,272 @@ h1 {
   color: #50453b;
   font-size: 1rem;
   line-height: 1.625rem;
+}
+
+/* Seção Templates */
+#templates {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  text-align: center;
+}
+
+#templates h2 {
+  color: #1b1c1a;
+  font-weight: 400;
+  font-family: var(--title-font-family);
+  font-size: 3rem;
+}
+
+.grid-container {
+  display: flex;
+  gap: 1.5rem;
+  row-gap: 3rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.5rem;
+}
+
+.grid-item img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.grid-title {
+  font-size: 1.5rem;
+  color: #1b1c1a;
+}
+
+/* Seção Preços */
+#price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#price h2 {
+  color: #1b1c1a;
+  font-family: var(--title-font-family);
+  font-size: 2.25rem;
+  font-weight: 400;
+  padding-bottom: 2.5rem;
+  text-align: center;
+  width: 100%;
+  text-wrap: wrap;
+}
+
+.card-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  height: fit-content;
+  min-width: fit-content;
+  width: 100%;
+  max-width: 384px;
+  padding: 2rem 1.5rem;
+  border-radius: 1.5rem;
+  border: solid 2px rgba(216, 160, 131, 0.3);
+  gap: 2rem;
+}
+
+.card-price-title {
+  font-size: 0.75rem;
+  letter-spacing: 0.075rem;
+  text-align: center;
+  color: #50453b;
+  flex-wrap: wrap;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.card-price-price {
+  text-align: center;
+  font-family: var(--title-font-family);
+  font-weight: 400;
+  color: #1b1c1a;
+  font-size: 2.25rem;
+  text-wrap: nowrap;
+  width: 100%;
+}
+
+.card-price ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: fit-content;
+  width: 100%;
+  list-style: none;
+}
+
+.card-price ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  color: #50453b;
+}
+
+.card-price ul li b {
+  color: #1b1c1a;
+}
+
+.fa-check {
+  color: var(--assent-color);
+  font-size: 0.875rem;
+}
+
+.card-price-btn {
+  text-transform: uppercase;
+  margin-top: -0.5rem;
+  background: var(--assent-color);
+  padding: 1rem 2rem;
+  text-align: center;
+  border-radius: 99px;
+  color: #fff;
+  font-size: 0.875rem;
+  letter-spacing: 0.0875rem;
+  text-wrap: nowrap;
+  font-weight: 400;
+}
+
+.price-subtitle {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.price-pay {
+  background: var(--bg);
+  color: #50453b;
+  text-align: center;
+  text-wrap: wrap;
+  width: fit-content;
+  max-width: calc(300px + 1rem);
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.0875rem;
+  padding: 0 0.5rem;
+  z-index: 1;
+}
+
+.price-line {
+  margin-top: -0.6rem;
+  width: 100%;
+  height: 2px;
+  background: rgba(128, 84, 59, 0.2);
+}
+
+/* Seção CTA */
+#call-to-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-call {
+  width: 100%;
+  max-width: 1024px;
+  padding: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  color: #fff;
+  border-radius: 3rem;
+  background: linear-gradient(154deg, #80543b 0%, #d8a083 100%);
+}
+
+.card-call img {
+  width: 2.625rem;
+  height: auto;
+}
+
+.card-call h2 {
+  font-family: var(--title-font-family);
+  font-size: 3.75rem;
+  line-height: 3.75rem;
+}
+
+.detail-call {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.btn-call {
+  width: 100%;
+  max-width: 274px;
+  height: fit-content;
+  font-size: 1rem;
+  color: #80543b;
+  letter-spacing: 0.05rem;
+  padding: 1.25rem 3rem;
+  background: #fff;
+  border-radius: 99px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  width: 100%;
+  justify-content: space-between;
+  gap: 3rem;
+  border: solid 1px rgba(212, 196, 183, 0.2);
+  background: #efeeea;
+}
+
+footer img {
+  width: auto;
+  height: 3.4rem;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: fit-content;
+  max-width: 520px;
+  gap: 2rem;
+  list-style: none;
+}
+
+footer ul li {
+  color: #57534e;
+  text-wrap: nowrap;
+  font-size: 0.75rem;
+  letter-spacing: 0.075rem;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  letter-spacing: 0.075rem;
+  line-height: 1rem;
+  color: #57534e;
 }
