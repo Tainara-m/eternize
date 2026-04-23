@@ -44,6 +44,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 999;
 }
 
 header img {
@@ -213,4 +214,87 @@ h1 {
   width: 100%;
   max-width: 220px;
   text-wrap: wrap;
+}
+
+/* Seção Processo */
+#how {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  background: #f5f3ef;
+}
+
+#how h2 {
+  font-family: "Noto Serif", sans-serif;
+  font-size: 3rem;
+  color: #1b1c1a;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.horizontal-line {
+  width: 12rem;
+  height: 1px;
+  background: linear-gradient(
+    rgba(212, 196, 183, 0) 0%,
+    #d4c4b7 50%,
+    rgba(212, 196, 183, 0) 100%
+  );
+}
+
+.how-subtitle {
+  width: 100%;
+  max-width: 576px;
+  font-size: 1rem;
+  color: #50453b;
+  line-height: 1.5rem;
+}
+
+.card-container {
+  width: 100%;
+  height: fit-content;
+  padding-top: 4.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 24rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(128, 84, 59, 0.15);
+  text-align: start;
+}
+
+.card-number {
+  width: 100%;
+  font-family: "Noto Serif", sans-serif;
+  font-size: 4rem;
+  line-height: 4.5rem;
+  color: rgba(128, 84, 59, 0.1);
+  text-decoration: underline;
+}
+
+.card-title {
+  width: 100%;
+  text-wrap: wrap;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #1b1c1a;
+}
+
+.card-subtitle {
+  color: #50453b;
+  font-size: 1rem;
+  line-height: 1.625rem;
 }
