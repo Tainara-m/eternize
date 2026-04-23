@@ -1,31 +1,22 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
+    <!-- SEO básico -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Crie homenagens digitais personalizadas com fotos, mensagens e compartilhe facilmente com quem você ama." />
+
     <title>Eternize</title>
+
     <link rel="stylesheet" href="./style.css" />
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./icon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./icon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./icon/favicon-16x16.png"
-    />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png" />
     <link rel="manifest" href="/icon/site.webmanifest" />
 
-    <!--Ícones -->
+    <!-- Ícones -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -35,14 +26,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Plus+Jakarta+Sans&display=swap"
       rel="stylesheet"
     />
   </head>
+
   <body>
+    <!-- HEADER -->
     <header>
-      <img src="./assets/logo.svg" alt="" />
-      <nav>
+      <img src="./assets/logo.svg" alt="Logo Eternize" />
+
+      <nav aria-label="Menu principal">
         <ul class="nav-links">
           <li><a href="#how">Como Funciona</a></li>
           <li><a href="#templates">Ver Templates</a></li>
@@ -50,141 +44,184 @@
           <li><a href="#contact">Suporte</a></li>
         </ul>
       </nav>
-      <a href="#contact" class="cta">Criar Homenagem <i class="fa-solid fa-arrow-right"></i
-      ></a>
+
+      <a href="#contact" class="cta">
+        Criar Homenagem <i class="fa-solid fa-arrow-right"></i>
+      </a>
     </header>
 
-    <section class="hero" id="hero">
-      <aside class="left-content">
-        <p class="hero-detail">
-          Para o Dia das Mães, Aniversários, Natal e mais
-        </p>
-        <h1>Crie uma homenagem que ela vai guardar para sempre.</h1>
-        <p class="hero-subtitle">
-          Escolha um template, personalize com fotos e mensagens, e compartilhe
-          o link em segundos. Sem código. Sem complicação.
-        </p>
-        <div class="buttons">
-          <a href="#templates" class="hero-templates-button">Ver Templates</a>
-          <a href="#contact" class="hero-exemple-button"
-            >Ver um exemplo <i class="fa-solid fa-arrow-right"></i
-          ></a>
-        </div>
-      </aside>
-      <aside class="right-content">
-        <div class="circle"></div>
-        <img
-          src="./assets/hero-image.webp"
-          alt="Imagem de uma senhora com uma frase homenageando-a"
-        />
-        <div class="phrase-container">
-          <p class="phrase">
-            "As histórias que contamos são as sementes que plantamos para o
-            futuro."
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="hero">
+        <div class="left-content">
+          <p class="hero-detail">
+            Para o Dia das Mães, Aniversários, Natal e mais
           </p>
-        </div>
-      </aside>
-    </section>
 
-    <section class="how">
-      <h2>Um Caminho Simples para o Sempre</h2>
-      <div class="horizontal-line"></div>
-      <p class="how-subtitle">
-        Criar uma Herança Digital é uma jornada guiada, desenhada com cuidado e
-        facilidade.
-      </p>
-      <div class="card-container">
-        <div class="card">
-          <div class="card-number">01</div>
-          <div class="card-horizontal-line">
-            <p class="card-title">Escolha o Template</p>
-            <p class="card-subtitle">
-              Selecione entre modelos pensados para cada ocasião: Dia das Mães,
-              aniversários, Natal, e muito mais.
+          <h1>Crie uma homenagem que ela vai guardar para sempre.</h1>
+
+          <p class="hero-subtitle">
+            Escolha um template, personalize com fotos e mensagens, e compartilhe
+            o link em segundos. Sem código. Sem complicação.
+          </p>
+
+          <div class="buttons">
+            <a href="#templates" class="hero-templates-button">Ver Templates</a>
+            <a href="#contact" class="hero-exemple-button">
+              Ver um exemplo <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="right-content">
+          <div class="circle"></div>
+
+          <img
+            src="./assets/hero-image.webp"
+            alt="Homenagem digital com foto e mensagem afetiva"
+          />
+
+          <div class="phrase-container">
+            <p class="phrase">
+              "As histórias que contamos são as sementes que plantamos para o futuro."
             </p>
           </div>
         </div>
-        <div class="card">
-          <div class="card-number">02</div>
-          <div class="card-horizontal-line">
-            <p class="card-title">Personalize</p>
-            <p class="card-subtitle">
-              Troque as fotos, escreva sua mensagem e ajuste as cores. Tudo em
-              tempo real, sem precisar de nenhum conhecimento técnico.
-            </p>
+      </section>
+
+      <!-- COMO FUNCIONA -->
+      <section class="how" id="how">
+        <h2>Um Caminho Simples para o Sempre</h2>
+
+        <div class="horizontal-line"></div>
+
+        <p class="how-subtitle">
+          Criar uma Herança Digital é uma jornada guiada, desenhada com cuidado e facilidade.
+        </p>
+
+        <div class="card-container">
+          <div class="card">
+            <div class="card-number">01</div>
+            <div class="card-horizontal-line">
+              <h3 class="card-title">Escolha o Template</h3>
+              <p class="card-subtitle">
+                Selecione entre modelos pensados para cada ocasião: Dia das Mães,
+                aniversários, Natal e mais.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-number">02</div>
+            <div class="card-horizontal-line">
+              <h3 class="card-title">Personalize</h3>
+              <p class="card-subtitle">
+                Troque as fotos, escreva sua mensagem e ajuste as cores.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-number">03</div>
+            <div class="card-horizontal-line">
+              <h3 class="card-title">Compartilhe</h3>
+              <p class="card-subtitle">
+                Receba um link único e envie facilmente.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-number">03</div>
-          <div class="card-horizontal-line">
-            <p class="card-title">Compartilhe</p>
-            <p class="card-subtitle">
-              Receba um link único e envie por WhatsApp, Instagram ou e-mail. A
-              homenagem fica disponível por 30 dias após a publicação.
-            </p>
+      </section>
+
+      <!-- TEMPLATES -->
+      <section class="templates" id="templates">
+        <div class="grid-container">
+          <div class="grid-item i1">
+            <h3 class="grid-title">Template alegria</h3>
+            <img src="https://static.wixstatic.com/media/077d5f_1ff80c98006e4152887eac32dbec27f6~mv2.jpg" alt="Template alegria exemplo" />
+          </div>
+
+          <div class="grid-item i2">
+            <h3 class="grid-title">Template saudade</h3>
+            <img src="https://static.wixstatic.com/media/16f059_906095923bfa4dbcbfbbe2b3b300540e~mv2.png" alt="Template saudade exemplo" />
+          </div>
+
+          <div class="grid-item i3">
+            <h3 class="grid-title">Template carinho</h3>
+            <img src="https://static.wixstatic.com/media/16f059_3bf86d9e7a4f4a6eacb7efce3ef94783~mv2.png" alt="Template carinho exemplo" />
+          </div>
+
+          <div class="grid-item i4">
+            <h3 class="grid-title">Template amor</h3>
+            <img src="https://static.wixstatic.com/media/16f059_3e9b2dca37b64b3091403b15a6490f41~mv2.png" alt="Template amor exemplo" />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="templates" id="templates">
-      <div class="grid-container">
-        <div class="grid-item i1">
-          <p class="grid-title"> Template alegria</p>
-          <img src="https://static.wixstatic.com/media/077d5f_1ff80c98006e4152887eac32dbec27f6~mv2.jpg/v1/fill/w_740,h_1833,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/077d5f_1ff80c98006e4152887eac32dbec27f6~mv2.jpg" alt="Exemplo de template de um site">
-        </div>
-        <div class="grid-item i2">
-          <p class="grid-title"> Template saudade</p>
-          <img src="https://static.wixstatic.com/media/16f059_906095923bfa4dbcbfbbe2b3b300540e~mv2.png/v1/fill/w_740,h_1536,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/16f059_906095923bfa4dbcbfbbe2b3b300540e~mv2.png" alt="Exemplo de template de um site">
-        </div>
-        <div class="grid-item i3"> 
-          <p class="grid-title"> Template carinho</p>
-          <img src="https://static.wixstatic.com/media/16f059_3bf86d9e7a4f4a6eacb7efce3ef94783~mv2.png/v1/fill/w_740,h_1233,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/16f059_3bf86d9e7a4f4a6eacb7efce3ef94783~mv2.png" alt="Exemplo de template de um site">
-        </div>
-        <div class="grid-item i4"> 
-          <p class="grid-title"> Template amor</p>
-          <img src="https://static.wixstatic.com/media/16f059_3e9b2dca37b64b3091403b15a6490f41~mv2.png/v1/fill/w_740,h_981,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/16f059_3e9b2dca37b64b3091403b15a6490f41~mv2.png" alt="Exemplo de template de um site">
-        </div>
-      </div>
-    </section>
+      <!-- PREÇO -->
+      <section class="price" id="price">
+        <h2 class="price-title">Um preço justo para um presente eterno.</h2>
 
-    <section class="price" id="price">
-      <h2 class="price-title">Um preço justo para um presente eterno.</h2>
-      <div class="card-price">
-        <p class="card-price-title">Template Completo</p>
-        <p class="card-price-price">R$ 9,99</p>
-        <ul>
-          <li><b>Personalização completa (fotos, textos e cores)</b></li>
-          <li>Link único para compartilhar</li>
-          <li>Disponível por 30 dias após a publicação</li>
-          <li>Funciona em qualquer celular ou computador</li>
-        </ul>
-        <a href="#contact" class="card-price-btn">Começar por R$9,99</a>
-      </div>
-      <div class="price-line"></div>
-      <p class="price-pay">Pagamento seguro via Mercado Pago</p>
-      <div class="price-line"></div>
-    </section>
+        <div class="card-price">
+          <h3 class="card-price-title">Template Completo</h3>
+          <p class="card-price-price">R$ 9,99</p>
 
-    <section class="call-to-action">
-      <div class="card-call">
-        <img src="assets/Vector 1.svg" alt="Logo da empresa">
-        <h2 class="title-call">Porque quem você ama merece ser lembrado.</h2>
-        <p class="detail-call">Crie agora e envie antes do grande dia.  <br> Leva menos de 5 minutos.</p>
-        <a href="#contact" class="btn-call">Começar meu tributo</a>
-      </div>
-    </section>
+          <ul>
+            <li><b>Personalização completa</b></li>
+            <li>Link único para compartilhar</li>
+            <li>Disponível por 30 dias</li>
+            <li>Funciona em qualquer dispositivo</li>
+          </ul>
 
-    <footer>
-      <img src="assets/logo.svg" alt="Logo da empresa">
+          <a href="#contact" class="card-price-btn">Começar por R$9,99</a>
+        </div>
+
+        <div class="price-line"></div>
+        <p class="price-pay">Pagamento seguro via Mercado Pago</p>
+        <div class="price-line"></div>
+      </section>
+    </main>
+
+    <!-- FOOTER = CONTACT -->
+    <footer id="contact">
+      <img src="assets/logo.svg" alt="Logo Eternize" />
+
+      <!-- Links -->
       <ul>
-        <li>POLÍTICA DE PRIVACIDADE</li>
-        <li>TERMOS DE SERVIÇO</li>
-        <li>Como funciona</li>
-        <li>Contato</li>
+        <li><a href="#">Política de Privacidade</a></li>
+        <li><a href="#">Termos de Serviço</a></li>
+        <li><a href="#how">Como funciona</a></li>
+        <li><a href="#contact">Contato</a></li>
       </ul>
-      <p class="copyright">© 2026 THE DIGITAL HEIRLOOM. Feito com cuidado para momentos que importam.</p>
+
+      <!-- Redes sociais -->
+      <nav aria-label="Redes sociais">
+        <ul class="social-links">
+          <li>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="mailto:contato@eternize.com" aria-label="E-mail">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <p class="copyright">
+        © 2026 THE DIGITAL HEIRLOOM. Feito com cuidado para momentos que importam.
+      </p>
     </footer>
+
     <script src="./script.js"></script>
   </body>
 </html>
