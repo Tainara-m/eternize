@@ -34,7 +34,7 @@ body {
 }
 
 header {
-  width: 100%;
+  width: 100vw;
   height: fit-content;
   display: flex;
   justify-content: space-between;
@@ -58,6 +58,7 @@ nav ul {
   display: flex;
   list-style: none;
   width: fit-content;
+  justify-content: space-between;
   align-items: center;
   gap: 2rem;
 }
@@ -66,9 +67,10 @@ nav ul {
   font-family: var(--title-font-family);
   font-size: 1rem;
   color: #78716c;
+  text-align: center;
 }
 
-header .cta {
+.cta {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,14 +95,13 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 6rem;
   padding: 6rem;
 }
 
 .left-content,
 .right-content {
   width: 100%;
-  max-width: 576px;
+  max-width: 35rem;
   height: fit-content;
 }
 
@@ -497,7 +498,7 @@ h1 {
   gap: 2rem;
   color: #fff;
   border-radius: 3rem;
-  background: linear-gradient(154deg, #80543b 0%, #d8a083 100%);
+  background: linear-gradient(154deg, var(--assent-color) 0%, #d8a083 100%);
 }
 
 .card-call img {
@@ -505,7 +506,7 @@ h1 {
   height: auto;
 }
 
-.card-call h2 {
+.card-call-title {
   font-family: var(--title-font-family);
   font-size: 3.75rem;
   line-height: 3.75rem;
@@ -521,7 +522,7 @@ h1 {
   max-width: 274px;
   height: fit-content;
   font-size: 1rem;
-  color: #80543b;
+  color: var(--assent-color);
   letter-spacing: 0.05rem;
   padding: 1.25rem 3rem;
   background: #fff;
@@ -533,7 +534,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 4rem 2rem;
-  width: 100%;
+  width: 100vw;
   justify-content: space-between;
   gap: 3rem;
   border: solid 1px rgba(212, 196, 183, 0.2);
@@ -570,4 +571,232 @@ footer ul li {
   letter-spacing: 0.075rem;
   line-height: 1rem;
   color: #57534e;
+  text-align: center;
+}
+
+/* EFEITOS */
+.nav-links .active {
+  color: var(--assent-color);
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  transition: 0.7s ease;
+}
+
+/* Menu Mobile */
+#menu-hamburguer,
+#menu-content {
+  display: none;
+}
+
+/* Responsividade */
+/* Mobile */
+@media (max-width: 767px) {
+  section,
+  #hero,
+  #skills {
+    padding: 8rem 1.5rem 3rem;
+  }
+
+  .nav-links,
+  header .cta,
+  .right-content {
+    display: none;
+  }
+
+  #menu-hamburguer {
+    display: flex;
+    width: auto;
+    height: 100%;
+    background: transparent;
+    border: none;
+    color: var(--assent-color);
+    font-size: 2.25rem;
+  }
+
+  #menu-content {
+    background: var(--bg);
+    z-index: 100;
+    position: fixed;
+    right: 0;
+    top: 5rem;
+    display: none;
+    height: fit-content;
+    width: 40%;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #menu-content .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  #menu-content .cta {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+
+  .buttons {
+    justify-content: center;
+    align-items: center;
+  }
+
+  h2,
+  #templates h2,
+  #how h2 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+
+  .price-pay {
+    width: 12rem;
+  }
+
+  .card-call {
+    padding: 1.5rem;
+  }
+
+  footer {
+    padding: 1.5rem;
+    gap: 0.5rem;
+  }
+
+  footer img {
+    display: none;
+  }
+
+  footer ul {
+    width: 50%;
+    gap: 0.5rem;
+  }
+
+  footer ul li {
+    font-size: 0.625rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  header .cta {
+    font-size: 0.75rem;
+    padding: 0.875rem 1rem;
+  }
+
+  .nav-links li a {
+    text-align: center;
+  }
+
+  header,
+  .nav-links {
+    gap: 1rem;
+  }
+}
+
+/* Ajuste específico para a nav bar não quebrar na parte dos links */
+@media (max-width: 784px) {
+  .nav-links,
+  header .cta {
+    display: none;
+  }
+
+  #menu-hamburguer {
+    display: flex;
+    width: auto;
+    height: 100%;
+    background: transparent;
+    border: none;
+    color: var(--assent-color);
+    font-size: 2.25rem;
+  }
+
+  #menu-content {
+    background: var(--bg);
+    z-index: 100;
+    position: fixed;
+    right: 0;
+    top: 5rem;
+    display: none;
+    height: fit-content;
+    width: 40%;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #menu-content .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  #menu-content .cta {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+  }
+}
+
+/* Ajustes de Fontes */
+@media (min-width: 320px) {
+  :root {
+    font-size: 11px;
+  }
+}
+@media (min-width: 275px) {
+  :root {
+    font-size: 12px;
+  }
+}
+@media (min-width: 425px) {
+  :root {
+    font-size: 13px;
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1440px) {
+  :root {
+    font-size: 16px;
+  }
+  body {
+    max-width: 1440px;
+  }
 }
