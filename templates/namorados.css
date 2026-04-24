@@ -1,0 +1,507 @@
+:root {
+    /* =========================
+       CORES PRINCIPAIS
+    ========================= */
+    /* Cor principal da marca */
+    --color-primary: #cf1c2e;
+    /* Uso: botões principais, links importantes, detalhes de destaque */
+    /* Variação mais escura da cor principal */
+    --color-primary-dark: #bb1d2c;
+    /* Uso: hover de botões, títulos fortes, elementos de contraste */
+    /* Cor secundária elegante */
+    --color-secondary: #8c1d3e;
+    /* Uso: seções especiais, detalhes sofisticados, bordas e ícones */
+    /* ========================
+       CORES DE FUNDO
+    ========================= */
+    /* Fundo principal do site */
+    --color-background: #faf5f2;
+    /* Uso: background geral das páginas */
+    /* Fundo alternativo */
+    --color-background-soft: #f6e1c6;
+    /* Uso: cards, blocos de conteúdo, áreas de destaque suave */
+    /* Fundo delicado */
+    --color-background-pink: #f9c8de;
+    /* Uso: banners românticos, detalhes visuais, seções decorativas */
+    /* =========================
+       TEXTOS
+    ========================= */
+    /* Texto principal */
+    --color-text: #3a1f1f;
+    /* Uso: parágrafos e textos longos */
+    /* Texto em destaque */
+    --color-text-strong: #8c1d3e;
+    /* Uso: títulos, subtítulos e palavras importantes */
+    /* Texto claro */
+    --color-text-light: #faf5f2;
+    /* Uso: textos sobre fundos escuros ou botões */
+    /* Texto suave */
+    --color-text-muted: #7a5c5c;
+    /* Uso: descrições, legendas, textos secundários */
+    /* =========================
+       BOTÕES
+    ========================= */
+    /* Botão principal */
+    --button-primary-bg: #cf1c2e;
+    --button-primary-text: #faf5f2;
+    --button-primary-hover: #bb1d2c;
+    /* Botão secundário */
+    --button-secondary-bg: #8c1d3e;
+    --button-secondary-text: #faf5f2;
+    --button-secondary-hover: #6f1732;
+    /* Botão suave */
+    --button-soft-bg: #f9c8de;
+    --button-soft-text: #8c1d3e;
+    --button-soft-hover: #f6e1c6;
+    /* =========================
+       LINKS
+    ========================= */
+    --link-color: #cf1c2e;
+    --link-hover: #8c1d3e;
+    /* =========================
+       CARDS E CAIXAS
+    ========================= */
+    --card-bg: #faf5f2;
+    --card-bg-soft: #f6e1c6;
+    --card-border: #f9c8de;
+    --card-shadow: rgba(140, 29, 62, 0.15);
+    /* =========================
+       CABEÇALHO E MENU
+    ========================= */
+    --header-bg: #faf5f2;
+    --header-text: #8c1d3e;
+    --menu-link: #8c1d3e;
+    --menu-link-hover: #cf1c2e;
+    /* =========================
+       RODAPÉ
+    ========================= */
+    --footer-bg: #8c1d3e;
+    --footer-text: #faf5f2;
+    --footer-link: #f9c8de;
+    --footer-link-hover: #f6e1c6;
+    /* =========================
+       BORDAS E DIVISORES
+    ========================= */
+    --border-color: #f9c8de;
+    --border-strong: #cf1c2e;
+    --divider-color: #f6e1c6;
+    /* =========================
+       ESTADOS VISUAIS
+    ======================== */
+    --success: #7fa66a;
+    --warning: #d9a441;
+    --error: #bb1d2c;
+    --info: #8c1d3e;
+    /* =========================
+       OVERLAYS E TRANSPARÊNCIAS
+    ========================= */
+    --overlay-dark: rgba(140, 29, 62, 0.65);
+    --overlay-soft: rgba(249, 200, 222, 0.45);
+
+    /* Fonte romântica (destaque) */
+    --font-romantic: 'Great Vibes', cursive;
+    /* Uso: títulos principais, frases, destaques */
+
+    /* Fonte elegante (estrutura) */
+    --font-primary: 'Playfair Display', serif;
+    /* Uso: títulos secundários e textos importantes */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    overscroll-behavior: none; /* bloqueia o scrool além do conteúdo */
+    scrollbar-width: none; /* esconde a barra (FireFox) */
+}
+/* esconde a barra (Chrome, Safari e Edge) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.hero {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1513193563746-fac77a988f8d?q=80&w=847&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(29, 10, 16, 0.55), rgba(255, 255, 255, 0.08));
+}
+
+.hero-bg {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right bottom, #ff050570, #ffffff00);
+    width: 100vw;
+    height: 100vh;
+}
+
+.hero h1 {
+    font-family: var(--font-romantic);
+    color: var(--color-text-light);
+    font-size: clamp(3rem, 5vw, 5.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    max-width: 900px;
+}
+
+.hero h1 span {
+    color: var(--border-strong);
+}
+
+.hero-subtitle {
+    color: var(--color-text-light);
+    font-family: var(--font-primary);
+    font-size: clamp(1rem, 1.2vw, 1.15rem);
+    line-height: 1.8;
+    max-width: 720px;
+    opacity: 0.95;
+}
+
+.hero a {
+    position: relative;
+    z-index: 3;
+    display: inline-flex;
+    width: 64px;
+    height: 64px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: 1.8rem;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hero a:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.28);
+}
+
+.overlay {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 0.85rem 1.25rem;
+    border-radius: 999px;
+    font-family: var(--font-primary);
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    align-self: flex-start ;
+    margin-left: 270px;
+}
+
+.btn-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Sobreposição */
+.icon {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Estado inicial */
+.icon-heart {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.icon-arrow {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+/* Hover */
+.btn-icon:hover .icon-heart {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.btn-icon:hover .icon-arrow {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.inst{
+    color: #faf5f2;
+}
+
+/* ===== STORY SECTION ===== */
+.story {
+    padding: 5rem 1.5rem;
+    background: var(--color-background);
+    text-align: center;
+}
+
+.story h3 {
+    color: var(--color-text-strong);
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+.story h2 {
+    color: var(--color-text);
+    font-family: var(--font-romantic);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 3rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    perspective: 1000px;
+    height: 320px;
+    cursor: pointer;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px var(--card-shadow);
+    transition: transform 0.6s ease;
+}
+
+.card-front {
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-back {
+    background: var(--color-primary);
+    color: var(--color-text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    font-weight: 400;
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-front {
+    transform: rotateY(-180deg);
+}
+
+.card:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+.card:hover .card-front img {
+    transform: scale(1.05);
+}
+
+.card-music {
+    grid-column: span 2;
+    height: 320px;
+}
+
+/* ===== EXPERIENCE SECTION ===== */
+.experience {
+    padding: 5rem 1.5rem;
+    background: var(--color-background-soft);
+    text-align: center;
+}
+
+.experience h3 {
+    color: var(--color-text-strong);
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+.experience h2 {
+    color: var(--color-text);
+    font-family: var(--font-romantic);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 3rem;
+}
+
+.exp-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.exp-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.exp-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px var(--card-shadow);
+}
+
+.exp-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.exp-title {
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1.5rem 1.5rem 0.5rem;
+    text-align: left;
+}
+
+.exp-subtitle {
+    color: var(--color-text-muted);
+    font-family: var(--font-primary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 1.5rem 1.5rem;
+    text-align: left;
+}
+
+/* ===== MESSAGE SECTION ===== */
+.message {
+    padding: 5rem 1.5rem;
+    background: var(--color-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.message-card {
+    background: var(--card-bg);
+    border-radius: 24px;
+    padding: 3rem 2.5rem;
+    width: 80vw;
+    box-shadow: 0 12px 48px var(--card-shadow);
+    text-align: center;
+    position: relative;
+    border: 2px solid var(--color-primary);
+    border-image: linear-gradient(45deg, var(--color-primary), var(--color-secondary)) 1;
+}
+
+.heart {
+    display: none; /* Removido, coração agora no título */
+}
+
+.message-title {
+    color: var(--color-text);
+    font-family: var(--font-romantic);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    position: relative;
+}
+
+.message-title::before {
+    content: '❤️';
+    font-size: 2rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.message-subtitle {
+    color: var(--color-text-muted);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: var(--color-background-soft);
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-romantic);
+    font-size: 1.7rem;
+    color: var(--color-text-strong);
+    border-top: 1px solid var(--color-border);
+}
+
+footer h6 {
+    margin: 0;
+    font-weight: 600;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+footer img {
+    height: 30px;
+    width: auto;
+}
