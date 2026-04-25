@@ -116,6 +116,11 @@
 html, body {
     scroll-behavior: smooth;
     overscroll-behavior: none; /* bloqueia o scrool além do conteúdo */
+    scrollbar-width: none; /* esconde a barra (FireFox) */
+}
+/* esconde a barra (Chrome, Safari e Edge) */
+::-webkit-scrollbar {
+  display: none;
 }
 
 .hero {
@@ -217,6 +222,7 @@ html, body {
     cursor: pointer;
 }
 
+/* Sobreposição */
 .icon {
     position: absolute;
     inset: 0;
@@ -227,6 +233,7 @@ html, body {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* Estado inicial */
 .icon-heart {
     opacity: 1;
     transform: scale(1);
@@ -252,6 +259,7 @@ html, body {
     color: #faf5f2;
 }
 
+/* ===== STORY SECTION ===== */
 .story {
     padding: 5rem 1.5rem;
     background: var(--color-background);
@@ -348,6 +356,7 @@ html, body {
     height: 320px;
 }
 
+/* ===== EXPERIENCE SECTION ===== */
 .experience {
     padding: 5rem 1.5rem;
     background: var(--color-background-soft);
@@ -419,6 +428,7 @@ html, body {
     text-align: left;
 }
 
+/* ===== MESSAGE SECTION ===== */
 .message {
     padding: 5rem 1.5rem;
     background: var(--color-background);
@@ -442,6 +452,7 @@ html, body {
 
 .heart {
     display: none;
+    display: none; /* Removido, coração agora no título */
 }
 
 .message-title {
@@ -468,6 +479,7 @@ html, body {
     margin: 0;
 }
 
+/* ===== FOOTER ===== */
 footer {
     background: var(--color-background-soft);
     padding: 2rem 2rem;
