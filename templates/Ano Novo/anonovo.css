@@ -31,15 +31,14 @@ section {
   align-items: center;
   padding: 4rem 2rem;
   width: 100%;
-  min-height: fit-content;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .hero {
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   background: url("https://images.unsplash.com/photo-1640685270311-49830c7a64e9?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
     center bottom / cover no-repeat;
 }
@@ -214,27 +213,31 @@ h2 {
 
 .card1 {
   background: url("https://images.unsplash.com/photo-1701308356218-7d2de87e9de7?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    center bottom / cover no-repeat;
+    center center / cover no-repeat;
   grid-column: span 2;
 }
 .card2 {
   background: url("https://images.unsplash.com/photo-1542744173-05336fcc7ad4?q=80&w=802&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    center bottom / cover no-repeat;
+    center center / cover no-repeat;
   grid-column: span 1;
   grid-column-start: 3;
 }
 .card3 {
   background: url("https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    center bottom / cover no-repeat;
+    center center / cover no-repeat;
   grid-column: span 1;
 }
 .card4 {
   background: url("https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=876&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    center bottom / cover no-repeat;
+    center center / cover no-repeat;
   grid-column: span 2;
 }
 
 /* Terceira Seção */
+.desires {
+  min-height: fit-content !important;
+}
+
 .desires h2 {
   align-self: start;
 }
@@ -245,8 +248,7 @@ h2 {
   justify-content: center;
   gap: 2rem;
   width: 100%;
-  height: fit-content;
-  max-height: 1080px;
+  height: auto;
 }
 
 .desires-card {
@@ -349,4 +351,81 @@ footer p {
 footer img {
   height: 30px;
   width: auto;
+}
+
+/* Responsividade */
+/* Mobile */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 3.2rem;
+  }
+
+  h2,
+  .message-title {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+
+  .goals-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 50vw);
+  }
+
+  .card1 {
+    grid-column: 1;
+    grid-row-start: 1;
+  }
+
+  .card2 {
+    grid-column: 1;
+    grid-row-start: 2;
+  }
+
+  .card3 {
+    grid-column: 1;
+    grid-row-start: 3;
+  }
+
+  .card4 {
+    grid-column: 1;
+    grid-row-start: 4;
+  }
+
+  footer img {
+    display: none;
+  }
+}
+
+/* Ajustes de Fontes */
+@media (min-width: 320px) {
+  :root {
+    font-size: 11px;
+  }
+}
+@media (min-width: 375px) {
+  :root {
+    font-size: 12px;
+  }
+}
+@media (min-width: 425px) {
+  :root {
+    font-size: 13px;
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1440px) {
+  :root {
+    font-size: 16px;
+  }
 }
