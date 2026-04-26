@@ -185,7 +185,7 @@ h1 {
   aspect-ratio: 1 / 1;
   border: solid 2px rgba(212, 196, 183, 0.3);
   margin-bottom: -10.2rem;
-  margin-left: 24rem;
+  margin-left: 26rem;
   z-index: 12;
 }
 
@@ -346,6 +346,7 @@ h1 {
 }
 
 .grid-title {
+  font-weight: 600;
   font-size: 1.5rem;
   color: #1b1c1a;
 }
@@ -536,7 +537,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
   width: 100vw;
   position: relative;
   left: 0;
@@ -563,7 +564,7 @@ footer ul {
   list-style: none;
 }
 
-footer ul li {
+footer ul li a {
   color: #57534e;
   text-wrap: nowrap;
   font-size: 0.75rem;
@@ -585,7 +586,53 @@ footer ul li {
   color: var(--assent-color);
   text-decoration: underline;
   text-underline-offset: 0.5rem;
-  transition: 0.7s ease;
+  transition: 0.5s ease;
+}
+
+.cta:hover,
+.hero-templates-button:hover,
+.card-price-btn:hover {
+  background: #50453b;
+  scale: 1.02;
+  transition: 0.5s ease;
+}
+
+.btn-call:hover {
+  background: #d4c4b7;
+  scale: 1.02;
+  transition: 0.5s ease;
+}
+
+.phrase-container:hover,
+.card:hover {
+  box-shadow: 0 0 20px -12px #000;
+  scale: 1.02;
+  transition: 0.5s ease;
+}
+
+nav ul li:hover,
+footer ul li:hover {
+  color: #50453b;
+  scale: 1.02;
+  transition: 0.2s ease;
+}
+
+.grid-item:hover {
+  scale: 1.02;
+  transition: 0.5s ease;
+}
+
+.grid-title:hover {
+  color: var(--assent-color);
+  scale: 1.02;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.hero-exemple-button:hover {
+  color: #50453b;
+  scale: 1.02;
+  transition: 0.2s ease;
 }
 
 /* Menu Mobile */
