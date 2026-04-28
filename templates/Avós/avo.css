@@ -1,0 +1,547 @@
+:root {
+    /* Fundo principal claro */
+    --color-bg: #F7F0E6;
+
+    /* Fundo secundário / cards */
+    --color-surface: #FFFFFF;
+
+    /* Marrom principal */
+    --color-primary: #8A5A2B;
+
+    /* Dourado suave */
+    --color-accent: #D8A85F;
+
+    /* Texto principal */
+    --color-text: #3E2A1D;
+
+    /* Texto secundário */
+    --color-muted: #8B7764;
+
+    /* Bordas e divisores */
+    --color-border: #E4D3BD;
+
+    /* Sombra suave */
+    --shadow-soft: 0 8px 24px rgba(62, 42, 29, 0.12);
+
+    --font-primary:"Dancing Script";
+    --font-secondary:"Lora";
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: var(--color-bg);
+    scroll-behavior: smooth;
+    overscroll-behavior: none; /* bloqueia o scrool além do conteúdo */
+}
+
+section{
+    width: 100%;
+}
+
+.hero{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://images.unsplash.com/photo-1529180979161-06b8b6d6f2be?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.overlay{
+    background-color: #f7f0e69f;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: var(--font-secondary);
+    font-size:0.8rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+h1{
+    font-family: var(--font-primary);
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-border);
+}
+
+.title{
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    color: #D8A85F;
+}
+
+i{
+    color: #8A5A2B;
+    margin-top: 20px;
+}
+
+.story{
+    background-color: #080300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin: 50px;
+}
+
+.under{
+    width: 350px;
+    height: 225px;
+    border-radius: 20px;
+    border: 7px solid #D8A85F;
+    box-shadow: #8a5a2b98 2px 2px 4px ;
+    z-index: 1;
+    transform: rotate(-5deg);
+}
+
+.upper{
+    width: 175px;
+    height: 122px;
+    border-radius: 20px;
+    border: 7px solid #8A5A2B;
+    box-shadow: #8a5a2b98 2px 2px 4px ;
+    z-index: 2;
+    position: relative;
+    top:-50px;
+    left: 130px;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    color: #8B7764;
+    width: 30%;
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+}
+
+h2{
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    color: #D8A85F;
+}
+
+.moments{
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 50px;
+}
+
+.parent {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+gap: 10px;
+margin-left: 50px;
+}
+
+.div1 { grid-area: 1 / 1 / 3 / 3; }
+.div2 { grid-area: 1 / 3 / 2 / 4; }
+.div3 { grid-area: 1 / 4 / 2 / 5; }
+.div4 { grid-area: 2 / 3 / 3 / 5; }
+
+.div1, .div2, .div3, .div4{
+background: rgba(255, 255, 255, 0.2); /* Cor de fundo com transparência */
+backdrop-filter: blur(10px); /* Efeito de desfoque */
+  /* border: 2px solid rgba(255, 255, 255, 0.4); Borda sutil */
+box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+border-radius: 20px; /* Cantos arredondados */
+padding: 20px;
+}
+
+.div1{
+    width: 440px;
+    height: 500px;
+}
+
+.div1 img{
+    width: 400px;
+    border-radius: 10px;
+}
+
+.div1 .title{
+    font-family: var(--font-primary);
+    font-size: 3rem;
+}
+
+.subtitle{
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.div2{
+    width: 330px;
+    height: 270px;
+    background-color: #3E2A1D;
+    color: #8B7764;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h3{
+    font-family: var(--font-primary);
+    text-align: center;
+    font-size: 2rem;
+}
+
+.div3{
+    width: 340px;
+    height: 270px;
+}
+
+.div3 img{
+    width: 300px;
+    border-radius: 10px;
+}
+
+.subt{
+    font-family: var(--font-primary);
+    font-weight: bold;
+    color: #8A5A2B;
+}
+
+.div4{
+    width: 680px;
+    height: 220px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.div4 .title{
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+}
+
+.div4 img{
+    width: 150px;
+    height: 150px;
+    border-radius: 99px;
+}
+
+.message{
+    background-image: url(https://images.unsplash.com/photo-1619043518800-7f14be467dca?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.message h2{
+    font-size: 5rem;
+    color: #3E2A1D;
+}
+
+.message .title{
+    color: #3E2A1D;
+}
+
+.declaration{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px ;
+    height: 100vh;
+}
+
+.declaration img{
+    width: 100px;
+    height: 100px;
+    border-radius: 99px;
+}
+
+button{
+    background-color: #3E2A1D;
+    color: #D8A85F;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: var(--font-secondary);
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+button:hover{
+    background-color: #8A5A2B;
+    color: #E4D3BD;
+}
+
+/* ===== RESPONSIVIDADE TOTAL ===== */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero,
+.story,
+.moments,
+.message,
+.declaration {
+    width: 100%;
+}
+
+/* Evita que conteúdo suma por causa do height fixo */
+.story,
+.moments,
+.message,
+.declaration {
+    height: auto;
+    min-height: 100vh;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 3.2rem;
+    }
+
+    .story {
+        flex-direction: column;
+        padding: 60px 30px;
+        gap: 20px;
+    }
+
+    .left {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .right {
+        width: 80%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .moments {
+        padding: 60px 30px;
+    }
+
+    .parent {
+        margin-left: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+
+    .div1,
+    .div2,
+    .div3,
+    .div4 {
+        grid-area: auto;
+        width: 100%;
+        height: auto;
+    }
+
+    .div4 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .message h2 {
+        font-size: 4rem;
+    }
+}
+
+/* ===== CELULAR ===== */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 100vh;
+        padding: 30px 20px;
+    }
+
+    .overlay {
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+        text-align: center;
+        line-height: 1.1;
+    }
+
+    .title {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .story {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .left {
+        margin: 0;
+        padding: 0;
+    }
+
+    .under {
+        width: 280px;
+        height: 180px;
+    }
+
+    .upper {
+        width: 140px;
+        height: 100px;
+        top: -35px;
+        left: 80px;
+    }
+
+    .right {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        font-size: 0.95rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .moments {
+        padding: 50px 20px;
+    }
+
+    .parent {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .div1,
+    .div2,
+    .div3,
+    .div4 {
+        width: 100%;
+        height: auto;
+        padding: 18px;
+    }
+
+    .div1 img,
+    .div3 img {
+        width: 100%;
+    }
+
+    .div1 .title {
+        font-size: 2.2rem;
+    }
+
+    .div2 {
+        min-height: 180px;
+    }
+
+    .div4 {
+        flex-direction: column;
+    }
+
+    .div4 img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    .message {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .message h2 {
+        font-size: 3rem;
+    }
+
+    .declaration {
+        padding: 50px 20px;
+        text-align: center;
+    }
+}
+
+/* ===== CELULAR PEQUENO ===== */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .under {
+        width: 230px;
+        height: 150px;
+    }
+
+    .upper {
+        width: 120px;
+        height: 85px;
+        left: 60px;
+    }
+
+    .message h2 {
+        font-size: 2.4rem;
+    }
+
+    .div1 .title {
+        font-size: 1.8rem;
+    }
+
+    .div4 img {
+        width: 110px;
+        height: 110px;
+    }
+
+    button {
+        width: 100%;
+        max-width: 260px;
+    }
+}
